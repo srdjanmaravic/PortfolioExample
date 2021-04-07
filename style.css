@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat%7CSource+Code+Pro');
+
+:root {
+    --crvena: #ad374f;
+    --plava:  #3765ad;
+    --bg: #f1f3fa;
+    --siva: #838383;
+    --font: #333333;
+    --bela: #fff;
+    --bodyFont: 'Montserrat', sans-serif;
+    --headings: 'Source Code Pro', monospace;
+    --fontSize: 16px;
+    --transtition: .3s ease;
+    --padding: 4rem 0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: var(--bodyFont);
+    line-height: 20px;
+    font-size: var(--fontSize);
+    color: var(--font);
+    background: var(--bg);
+    
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--headings);
+    color: var(--crvena);
+}
+h2 {
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom: 40px;
+}
+ul {
+    list-style: none;
+}
+.container {
+    max-width: 1140px;
+    margin: auto;
+}
+.btn {
+    padding: 15px 40px;
+    color: var(--bela);
+    background: var(--crvena);
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin:  30px auto 0 auto;
+    transition: var(--transtition);
+    box-shadow: 0 0 20px var(--siva);
+}
+.btn:hover {
+    background: var(--plava);
+    
+}
+.dropdownLink {
+    display: none;
+}
+/* navBar */
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 25px 100px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+.logo, .nav-link, a {
+    color: var(--font);
+    text-transform: uppercase;
+}
+.logo {
+    font-size: 1.5rem;
+}
+.logo span {
+    color: var(--crvena);
+}
+.topNav {
+    display: flex;
+    font-size: 1.2rem;
+}
+.topNav .nav-link {
+    padding-left: 20px;
+    text-decoration: none;
+    transition: var(--transtition);
+}
+.topNav .nav-link:hover {
+    color: var(--crvena);
+}
+.sticky {
+    background: white;
+    box-shadow: 0 2px 10px 5px rgba(0,0,0,.1);
+    transition: 1s ease;
+    padding: 15px 100px;
+}
+/* Header */
+header {
+    background-image: linear-gradient(rgba(255,255,255,.9),rgba(255,255,255,.6)), url(img/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.wrapper img {
+    width: 35%;
+    border-radius: 50%;
+    box-shadow: 0 0 40px var(--font);
+}
+.wrapper h1 {
+    color: var(--plava);
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin-top: 40px;
+    text-shadow: 3px 3px 3px var(--crvena);
+}
+/* Services */
+.services {
+    padding: var(--padding);
+}
+.services h2 {
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom: 40px;
+}
+.service {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.service div {
+    flex:1;
+}
+.img {
+    display: flex;
+    justify-content: center;
+}
+.service:nth-child(odd) .img {
+    order:2;
+}
+.service:nth-child(odd) .text {
+    order:1;
+    text-align: right;
+}
+.services h3 {
+     font-size: 2rem;
+     margin-bottom: 20px;
+}
+.services p {
+    color: var(--siva);
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+/* portfolio */
+.portfolio {
+    padding: var(--padding);
+    background: var(--bela);
+}
+.portfolio .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.projectWrapper {
+    flex: 0 0 31%;
+    margin-bottom: 40px;
+}
+.projectWrapper:last-child {
+    margin: auto;
+}
+.projectWrapper img {
+    
+    display: block;
+    width: 100%;
+}
+.projectWrapper .text {
+    background: var(--bg);
+    text-align: center;
+    padding: 20px;
+}
+.projectWrapper  h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+/* Kontakt */
+#kontakt {
+    padding: var(--padding);
+}
+form {
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+     
+}
+input {
+    flex: 0 0 48%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1rem;
+}
+textarea {
+    flex: 0 0 100%;
+    padding: 10px;
+}
+#kontakt .btn {
+    flex: 0 0 100%;
+     
+}
+
+/* Footer */
+footer {
+    padding: var(--padding);
+    background:var(--plava);
+    color: var(--bela);
+    line-height: 1.2;
+}
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer .container div:nth-child(1) {
+    flex: 0 0 55%;
+}
+footer .container div:nth-child(2) {
+    flex: 0 0 20%;
+}
+footer .container div:nth-child(3) {
+    flex: 0 0 21%;
+}
+footer .container a {
+    color: var(--bela);
+    text-decoration: none;
+    transition: var(--transtition);
+    line-height: 1.5;
+}
+footer .container a:hover {
+    color: var(--crvena);
+    
+}
+footer h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 2px black;
+}
+/* Reponsive */
+@media(max-width:768px) {
+    .container {
+        width: 90%;
+    }
+    .wrapper h1 {
+        line-height: 1.3;
+        font-size: 2rem;
+    }
+    .wrapper img {
+        width: 50%;
+    }
+    h2 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    header {
+        height: 90vh;
+    }
+    .service div {
+        flex:1;
+    }
+    .service:nth-child(odd) .img {
+        order:1;
+    }
+    .service:nth-child(odd) .text {
+        order:2;
+        text-align: center;
+    }
+    .service div {
+        text-align: center;
+    }
+    .projectWrapper {
+        flex: 0 0 100%;
+    }
+    form {
+        width: 90%;
+    }
+    input {
+        flex: 0 0 100%;
+    }
+    footer .container div:nth-child(1), footer .container div:nth-child(2), footer .container div:nth-child(3) {
+        flex: 0 0 100%;
+    }
+    .navBar {
+        padding: 25px;
+    }
+    ul.topNav li a.nav-link {
+        display:none ;
+    }
+    ul.topNav li.dropdownLink {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 25px;
+    }
+    ul.topNav li.dropdownLink a {
+        text-decoration: none;
+    }
+    ul.topNav.responsive li.dropdownLink {
+        position: absolute;
+        top: 15px;
+        right: 25px;
+    }
+    ul.topNav.responsive {
+        flex-direction: column;
+        text-align: right;
+        /* background: var(--bela); */
+        background: transparent;
+        padding: 20px;
+    }
+    ul.topNav.responsive li a.nav-link {
+        display: block;
+    }
+    ul.topNav.responsive li {
+        top: 15px;
+        right:25px;
+        position: relative;
+    }
+}
